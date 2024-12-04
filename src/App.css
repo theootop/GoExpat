@@ -13,6 +13,70 @@
   }
 }
 
+
+
+@media (max-width: 992px) { /* Tablettes paysage */
+  .hero-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  .about-texte-droite {
+    margin-top: 0; /* Évite les décalages sur écrans étroits */
+  }
+}
+
+@media (max-width: 768px) { /* Tablettes portrait et téléphones grands */
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) { /* Petits téléphones */
+  .hero-section {
+    padding: 1rem;
+  }
+  .card {
+    flex-direction: column; /* Les cartes en colonne */
+    padding: 0.5rem;
+  }
+}
+
+h1, h2, p {
+  max-width: 90vw;
+}
+
+.card img {
+  max-width: 100%; /* Assure que les images ne débordent pas */
+  height: auto; /* Conserve les proportions */
+}
+
+@media (max-width: 576px) {
+  .video-container {
+    display: none; /* Cache la vidéo sur très petits écrans */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Navigation verticale */
+  }
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+.html {
+  scroll-behavior: smooth;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,6 +92,8 @@
   color: #61dafb;
 }
 
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +101,587 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.options-section h2, .destinations-section h2 {
+  font-weight: bold;
+}
+
+.card img {
+  border-radius: 5px;
+}
+
+.card {
+ padding: 1rem;
+  transition: transform 0.3s ease;
+  /*background: rgba(255, 255, 255, 0.1); /* Couleur blanche semi-transparente */
+  backdrop-filter: blur(5px); /* Applique un flou de 10px */
+  -webkit-backdrop-filter: blur(5px); /* Compatibilité avec Safari */
+  /*border-radius: 10px; /* Ajoute des bords arrondis (optionnel) */
+  padding: 0px; /* Espace interne pour le contenu (optionnel) */
+  padding-bottom: 1.5rem;
+  min-height: 100%; /* Important : s'étend pour remplir la hauteur */
+  display: flex;
+  flex-direction: column; 
+  
+  
+  /*background: #30434adc;*/
+  background: rgba(40, 38, 38, 0.5); /* Fond semi-transparent */
+  backdrop-filter: blur(10px);
+  /* Pour un contenu bien aligné verticalement */
+  /*background-color: #f6f6f6;
+  border-radius: 10px;
+  box-shadow: black;
+  background: rgba(255, 255, 255, 1); 
+  border-color:rgba(255, 255, 255, 1);*/
+  z-index: 1;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Style pour la vidéo de fond */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Place la vidéo derrière le contenu */
+}
+
+
+/* Contenu superposé */
+.content {
+  position: relative;
+  z-index: 2; /* Assure que le contenu est au-dessus de la vidéo */
+  text-align: center;
+  color: white;
+  padding: 20px 20px;
+}
+
+.hero-section {
+  background: rgba(0, 0, 0, 0); /* Ajoute une légère transparence pour plus de lisibilité */
+  padding: 4rem;
+  /*border-radius: 10px;*/
+}
+
+/* Fond vidéo plein écran */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Derrière tout le contenu */
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+/* Contenu superposé */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.white {
+  color: white; /* Texte blanc pour le contraste */
+  
+}
+.white-light{
+  color: #f6f6f6; /* Texte blanc pour le contraste */
+  
+}
+.who{
+  padding-left: 30px;
+  padding-right: 30px;
+  
+}
+
+
+.hero-section {
+  color: white; /* Texte blanc pour le contraste */
+  padding-top: 10rem ;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.video-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Assombrit la vidéo */
+  z-index: 0;
+}
+
+.navbar {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  background-color: rgba(0, 0, 0, 0.5); /* Noir avec 50% de transparence */
+  transition: background-color 0.3s ease; /* Transition douce */
+  z-index:2;
+}
+
+.navbar .nav-link {
+  
+
+  color: #fff; /* Texte blanc */
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  
+
+  color: #f8d32d; /* Couleur survol (or) */
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.2); /* Fond plus sombre quand on défile */
+}
+
+.navbar-brand{
+  
+  color: #f6f6f6;
+}
+
+.btn-outline-white {
+  border: 1px solid #f6f6f6; /* Bordure blanche */
+  color: #f6f6f6; /* Texte blanc */
+  background-color: transparent; /* Fond transparent */
+  transition: all 0.1s ease; /* Transition douce */
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Fond noir au survol */
+  color: #f6f6f6; /* Texte blanc */
+  border-color: #f6f6f69e; /* Bordure noire pour matcher le fond */
+}
+
+.arrow{
+  position: absolute;
+  align-items: center;
+  text-align: center;
+}
+
+.arrow-offset {
+  padding-top: 100px; /* Modifie la valeur selon tes besoins */
+}
+
+/* section */
+.options-section {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 6rem;
+
+}
+
+.destinations-section {
+  /*padding: 4rem 0; /* 64px en haut et en bas */
+  padding-top: 4rem;
+  min-height: auto; /* Ajuste selon le contenu */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding-left: 150px;
+  padding-right: 150px;
+  z-index: 1;
+}
+
+.title-section-option{
+  padding: 5rem 0;
+  text-align: center;
+  }
+
+  .blur-background {
+    background: rgba(255, 255, 255, 0.1); /* Couleur blanche semi-transparente */
+    backdrop-filter: blur(10px); /* Applique un flou de 10px */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilité avec Safari */
+    border-radius: 10px; /* Ajoute des bords arrondis (optionnel) */
+    padding: 20px; /* Espace interne pour le contenu (optionnel) */
+    padding-bottom: 6.5rem;
+  }
+
+  .space-title{
+    padding: 1rem;
+    }
+
+ /* Style pour H3 moderne et gras */
+h3.modern-title {
+  font-family: 'futura', sans-serif; /* Police moderne, remplaçable par Futura si disponible */
+  font-size: 2.5rem; /* Taille légèrement plus grande pour un effet impactant */
+  font-weight: 800; /* Ultra-bold pour un aspect gras et moderne */
+  color: #fff; /* Couleur blanche, modifiable */
+  text-transform: uppercase; /* Tout en majuscules pour un look moderne */
+  letter-spacing: 2px; /* Espacement large entre les lettres pour un effet design */
+  text-align: center; /* Centrer le texte */
+  margin-bottom: 1rem; /* Espacement en bas */
+  position: relative; /* Nécessaire pour les pseudo-éléments */
+}
+
+/* Effet décoratif : Ligne fine */
+h3.modern-title::after {
+  content: '';
+  display: block;
+  width: 300px; /* Longueur de la ligne */
+  height: 4px; /* Épaisseur de la ligne */
+  background: #fff; /* Dégradé moderne et vibrant */
+  margin: 0.8rem auto 0; /* Centrer sous le titre */
+  border-radius: 10px; /* Bords arrondis */
+  box-shadow: 0 0 0px #f6f6f6; /* Effet lumineux sous la ligne */
+}
+
+/* Option : Animation d'apparition */
+h3.modern-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 3s ease-out forwards; /* Apparition fluide */
+  padding: 2rem;
+  padding-bottom: 4rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+ /* Section Contact */
+.contact-section {
+  position: relative;
+  color: #fff;
+  padding: 10rem 0;
+  z-index: 1;
+  
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(12px); /* Flou plus intense */
+  
+  background: rgba(0, 0, 0, 0.2); /* Couche sombre semi-transparente */
+  z-index: -1;
+}
+
+.contact-section .section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.contact-section .section-description {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.contact-section .contact-form {
+  background: rgba(255, 255, 255, 0.1); /* Fond transparent subtil */
+ 
+  /*border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure légère */
+  border-radius: 1rem; 
+  padding: 2rem;
+  /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Ombre pour un effet flottant */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section .contact-form:hover {
+  transform: translateY(-1px); /* Légère élévation au survol */
+ /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);*/
+}
+
+.contact-section .form-label {
+  font-weight: bold;
+  color: #f9f9f9;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.contact-section .form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.9rem;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.contact-section .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*.contact-section .form-control:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 1px rgba(106, 17, 203, 0.4);
+  outline: none;
+}*/
+
+.contact-section .btn-primary {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: black;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+  background: rgb(32, 31, 31);
+  box-shadow: 0px 2px 5px black;
+}
+
+.contact-section .btn-primary:focus {
+  outline: none;
+}
+
+.h5.card-title {
+  font-family: 'futura', sans-serif; /* Police moderne, remplaçable par Futura si disponible */
+  font-size: 1.5rem; /* Taille légèrement plus grande pour un effet impactant */
+  font-weight: 400; /* Ultra-bold pour un aspect gras et moderne */
+  color: #fff; /* Couleur blanche, modifiable */
+  text-transform: uppercase; /* Tout en majuscules pour un look moderne */
+  letter-spacing: 2px; /* Espacement large entre les lettres pour un effet design */
+  text-align: center; /* Centrer le texte */
+  margin-bottom: 1rem; /* Espacement en bas */
+  position: relative; /* Nécessaire pour les pseudo-éléments */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Taille du titre */
+  color: #f6f6f6; /* Couleur blanche */
+  font-weight: 550; /* Optionnel : rendre le texte en gras */
+  text-align: center; /* Optionnel : centrer le titre */
+  margin-bottom: 1rem; /* Optionnel : espacement sous le titre */
+  padding:0.5rem;
+
+}
+
+
+.testimonials-section {
+  background: rgba(40, 38, 38, 0.0); /* Fond semi-transparent */
+  backdrop-filter: blur(13px);
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.testimonials-section .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.testimonials-section .section-description {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.card-testi {
+  border-radius: 10px;
+  padding:3rem;
+  min-height: 100%; /* Important : s'étend pour remplir la hauteur */
+  display: flex;
+  flex-direction: column; 
+}
+
+.card-text-testi {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.card-title-testi {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+
+
+
+
+
+
+/* Section Qui Sommes-Nous avec fond transparent */
+#about {
+  background-color: transparent; /* Fond transparent pour la section */
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+#about .container {
+  background-color: transparent; /* Fond transparent pour le container */
+}
+
+#about .section-title {
+  color: white; /* Maintenir la couleur du texte du titre */
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#about .section-description {
+  color: lightgray; /* Couleur de description en gris clair */
+}
+
+#about .card {
+ 
+  border: none; /* Enlever les bordures */
+  backdrop-filter: blur(5px); /* Applique un flou de 10px */
+  -webkit-backdrop-filter: blur(5px); /* Compatibilité avec Safari */
+  /*border-radius: 10px; /* Ajoute des bords arrondis (optionnel) */
+  padding: 15px; /* Espace interne pour le contenu (optionnel) */
+  padding-bottom: 1.5rem;
+  min-height: 100%; /* Important : s'étend pour remplir la hauteur */
+  display: flex;
+  flex-direction: column; 
+
+  /*background: #30434adc;*/
+  background: rgba(40, 38, 38, 0.5); /* Fond semi-transparent */
+  backdrop-filter: blur(10px);
+}
+
+#about .card-body {
+  background-color: transparent; /* Enlever fond de la carte */
+}
+
+#about .card-img-top {
+  border: 3px solid rgba(255, 255, 255, 0.1); /* Bordure blanche autour des images des profils */
+  padding: 5px; /* Un petit padding pour l'effet visuel */
+}
+
+#about .btn-dark, #about .btn-outline-light {
+  transition: background-color 0.3s ease-in-out;
+}
+
+#about .btn-dark:hover, #about .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Effet de survol pour les boutons */
+}
+
+.about-texte-droite{
+padding-left:5rem;
+padding-right: 5rem;
+
+}
+
+.texte-droite{
+ font-size: 1.5rem;
+  }
+
+.texte-droite-title{
+    font-size: 2rem;
+    font-weight: bold;
+
+     }
+
+
+
+@media (max-width: 768px) {
+  /* Sur les petits écrans, nous pouvons augmenter un peu les images pour les rendre plus visibles */
+  .card-img-top {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Filtre noir et blanc sur une image */
+.image-black-and-white {
+  filter: grayscale(100%); /* Applique un filtre noir et blanc à l'image */
+  transition: filter 0.3s ease-in-out; /* Ajoute une transition douce lors du changement */
+  height: auto;
+}
+
+.why-choose-us{
+
+ margin-top: 7rem;
+ background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Conteneur principal du texte */
+.about-texte-droite {
+  line-height: 1.8; /* Espacement vertical entre les lignes */
+  font-size: 1.1rem; /* Taille de la police */
+  padding: 10px 20px; /* Espacement interne réduit en haut et sur les côtés */
+  text-align: left; /* Alignement du texte à gauche */
+  margin-top: -120px; /* Remonte le conteneur */
+  
+}
+
+/* Titres */
+.text-droite-title {
+  font-size: 1.8rem; /* Taille des titres */
+  font-weight: bold; /* Gras pour les titres */
+  color: #f8f9fa; /* Couleur blanche */
+  margin-bottom: 15px; /* Espacement sous le titre */
+  padding-top: 10rem;
+}
+
+/* Paragraphes */
+.text-droite {
+  color: #dcdcdc; /* Couleur douce pour le texte */
+  margin-bottom: 20px; /* Espacement sous les paragraphes */
+  text-align: left; /* Alignement à gauche des paragraphes */
+  
+}
+
+/* Liste */
+.text-droite ul {
+  list-style-type: disc; /* Puces classiques */
+  padding-left: 20px; /* Indentation des listes */
+  margin-bottom: 20px; /* Espacement sous la liste */
+}
+
+.text-droite li {
+  margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+  text-align: left; /* Alignement à gauche des éléments */
 }
